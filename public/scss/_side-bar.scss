@@ -1,0 +1,112 @@
+.side-bar{
+    position: relative;
+           
+    .title{
+        color: $grey-dark;
+        margin-bottom: 30px;        
+    }
+    
+    .reset{
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+        outline: 0;
+        background-color: white;
+        font-family: Avenir;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #4e4e4e;
+        text-decoration: underline;       
+        cursor: pointer;
+    }
+
+    .filter{
+        padding: 20px 0;
+        border: 0;
+        outline: none;        
+        border-bottom: 2px solid $grey-light;
+        width: 100%;
+        color: $text;       
+    }
+
+    .range{
+        
+        position: relative;
+        margin-top: 25px;
+        font-weight: 500;
+        color: $text;
+        
+        .slide-bar{
+            margin: 25px 2px;
+            background-color: $grey-light;
+            width: 100%;
+            outline: none;
+            appearance: none;
+            height: 3px;
+            border-radius: 25px;
+            
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                background: #FFFFFF;
+                border: 2px solid #222;
+                border-radius: 25px;
+                cursor: pointer;
+              }
+        }
+
+        p{
+            display: inline;            
+        }
+                
+        .max-price{
+            float: right;
+        }
+        
+        output{
+           position: absolute;
+           bottom: 50px;
+           right: 0;
+           color: $grey-dark;
+           font-size: 0.7rem;
+        }
+    }
+
+    @media only screen and (max-width: $small){
+        .title{
+            font-size: 0.8rem;            
+        }
+    }
+}
+
+@media only screen and (max-width: $small){
+    #sideBarDropdown{
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: $text;
+        padding: 8px 4px 8px 4px;
+        margin-bottom: -20px;
+        border-bottom: 2px solid $grey-light;  
+        
+    }           
+    
+    .side-bar{
+        height: 0px;            
+    }
+    .side-bar-mobile{        
+        overflow: hidden;       
+        transition: 0.3s ease-out;  
+        border: 0; 
+    }    
+}
+
+@media only screen and (min-width: $small){
+
+    #sideBarDropdown{
+        display: none;
+    }
+    
+}

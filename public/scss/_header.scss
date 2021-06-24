@@ -1,0 +1,71 @@
+.navbar{    
+    display: flex;
+    align-items: center; 
+    font-weight: 600;   
+    max-width: 1600px; 
+    margin: 0 auto;
+
+    img{
+        transform: scale(0.9);        
+    }
+
+    ul{
+        display: flex;
+        padding-top: 10px;
+    }
+            
+    a{
+        padding: 10px 10px;
+        margin: 0 10px;    
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }    
+
+    .logo{
+        font-size: 3rem;
+        font-weight: 800;  
+        padding-left: 12px;     
+        
+        a:hover{
+           text-decoration: none;
+        }
+    }    
+
+
+    .nav-right{
+        margin: 0 0 0 auto;
+        padding-top: 10px;
+        display: flex;     
+        align-items: center;    
+        
+        a{
+            padding: 20px 0 20px 40px;
+        }      
+    }
+    
+}
+
+.navbar-mobile{    
+    align-items: center; 
+    justify-content: space-between;
+    font-weight: 600;
+
+    img{
+        cursor: pointer;
+    }
+       
+    .btn-menu{        
+        zoom: 0.75;
+    }   
+    
+    .logo{
+        font-size: 2.4rem;
+        font-weight: 800; 
+    }
+
+    .cart{        
+        padding-right: 10px;
+    }
+}

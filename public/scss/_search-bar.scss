@@ -1,0 +1,146 @@
+
+.search-bar{
+    display: flex;
+    align-items: center;    
+    position: relative;
+   
+    
+    form{
+        display: flex;             
+        width: 100%;
+
+        input{
+            margin-top: 6px;
+            height: 61px;
+        }        
+    }    
+    
+    button{
+        border: 0;
+        background: white;
+        cursor: pointer;
+        padding: 20px;        
+    }
+    
+    .search{    
+        position: relative;         
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $text;
+        font-size: 1.8rem;
+        outline: none;        
+        margin-left: 20px;
+        font-family: "Avenir";
+        font-weight: 700;
+        color: $text;        
+        
+        &::placeholder{            
+            color: $text;
+            opacity: 1;
+            transition: 0.15s ease-in;
+        }
+    }  
+    
+    // HIDE CROSS ICON    
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    }
+    
+    
+    .algolia{
+        display: flex;
+        position: absolute;
+        right: 0px;
+        align-items: center;
+        font-size: 0.8rem;
+        
+        p{
+            padding-right: 30px;
+        }
+    }  
+
+    @media only screen and (max-width: $small){
+        margin-bottom: 30px;
+       
+        button{
+            transform: scale(0.6);
+            padding: 0;     
+            margin: 0 10px 0 0;       
+        }
+
+        .search{   
+            font-size: 1.2rem;
+            margin: auto 0;                   
+        }
+
+        .algolia{
+            display: none;
+        }
+    }
+}
+
+.selectdiv{    
+     margin: auto 0 ;      
+
+    .filter{       
+        width: 100%;
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid $grey-light;
+        font-size: 1.8rem;  
+        color: $text;       
+    }  
+    
+    option:hover{
+        background: #CCC;       
+    }
+
+    @media only screen and (max-width: $small){
+
+        .filter{
+            font-size: 1.2rem;
+        }        
+    }
+}
+  
+// MESSAGE ERROR WHEN 0 MATCH SEARCH BAR
+.not-found{
+
+    img{
+        width: 30%;
+        padding: 20px 40px;
+        align-self: center;
+    }
+
+    p{
+        margin: auto 0; 
+        text-align: center;       
+    }
+    display: flex;   
+    grid-column: 2/5;
+    font-size: 2.6rem;
+    line-height: 1.5em;
+    font-weight: 800;
+
+    @media only screen and (max-width: $large){
+        img{
+            width: 50%;
+        }
+        grid-column: 2/4;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: $medium){
+        img{
+            width: 100%;
+        }            
+        grid-column: 2/3;
+        font-size: 1.6em;
+    }
+
+    @media only screen and (max-width: $small){
+        grid-column: 1 span;
+    }
+}
