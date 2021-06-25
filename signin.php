@@ -1,4 +1,4 @@
-<?php include_once './src/connect_db.php';?>
+<?php include_once './config/connect_db.php';?>
 <?php session_start(); ?>
 
 <!DOCTYPE html>

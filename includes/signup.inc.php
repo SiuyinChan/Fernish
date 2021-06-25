@@ -11,7 +11,7 @@ if  (isset($_POST["submit"])) {
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["pwdrepeat"];
 
-    require_once "../src/connect_db.php";
+    require_once "../config/connect_db.php";
     require_once "./authentication.inc.php";
 
     $objSignup = new Authentication($username, $pwd, $email, $pwdRepeat);

@@ -1,7 +1,7 @@
 <?php
 global $db;
 
-include_once './src/connect_db.php';
+include_once './config/connect_db.php';
 session_start();
 
 if(isset($_GET['id']) && is_numeric($_GET['id'])) {

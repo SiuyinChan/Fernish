@@ -5,7 +5,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] == 0) {
     exit();
 }
 ?>
-<?php include_once './src/connect_db.php';?>
+<?php include_once './config/connect_db.php';?>
 
 <!DOCTYPE html>
 <html lang="en">

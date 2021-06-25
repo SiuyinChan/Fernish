@@ -8,7 +8,7 @@ if (isset($_POST["submit"])) {
     $username = $_POST["uid"];
     $pwd = $_POST["pwd"];
 
-    require_once "../src/connect_db.php";
+    require_once "../config/connect_db.php";
     require_once "./authentication.inc.php";
 
     $objLogin = new Authentication($username, $pwd);

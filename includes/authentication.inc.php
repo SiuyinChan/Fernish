@@ -1,7 +1,7 @@
 <?php
 
 namespace includes;
-include_once "../src/connect_db.php";
+include_once "../config/connect_db.php";
 
 class Authentication
 {
